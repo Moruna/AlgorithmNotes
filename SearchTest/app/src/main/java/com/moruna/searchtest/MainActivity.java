@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.moruna.searchtest.bisearch.Bisearch;
+import com.moruna.searchtest.sequence.SequenceSearch;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
@@ -16,6 +17,9 @@ public class MainActivity extends AppCompatActivity {
         int[] data = {5, 10, 50, 9, 59, 66, 100, 5};
 
         int index = Bisearch.search(data, 66);
+        Log.e(TAG, "onCreate: index = " + index);
+
+        index = SequenceSearch.search(data, 59);
         Log.e(TAG, "onCreate: index = " + index);
     }
 }
